@@ -1,20 +1,14 @@
-// import { generateText } from "ai";
-// import { openAIProvider } from "./lib/ai/openai_provider";
+import { main } from "./lib/ai/openAI";
 
 export default async function Home() {
-  // const { text } = await generateText({
-  //   model: openAIProvider('gpt-4o-mini'),
-  //   system: 'You are a friendly assistant!',
-  //   prompt: 'Why is the sky blue?',
-  // });
-
-  // console.log(text)
-  
+  const chat = await main()
 
   return (
     <div>
       <h1>Hello World</h1>
-      {/* {text} */}
+      {
+        JSON.stringify(chat)
+      }
     </div>
   );
 }
