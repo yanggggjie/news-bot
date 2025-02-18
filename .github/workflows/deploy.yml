@@ -1,4 +1,4 @@
-name: Deploy Next.js site to Pages old
+name: Deploy Next.js site to Pages Old
 
 on:
   workflow_dispatch:
@@ -36,8 +36,8 @@ jobs:
       - name: Build the project with yarn
         run: yarn run build
         env:
-          MY_OPENAI_TOKEN: ${{ secrets.MY_OPENAI_TOKEN }}
-          MY_GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
+          AI_SK: ${{ secrets.AI_SK }}
+          AI_BASE_URL: ${{ secrets.AI_BASE_URL }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
