@@ -34,7 +34,7 @@ jobs:
         run: yarn install
 
       - name: Build the project with yarn
-        run: yarn run build-with-fresh-data
+        run: yarn run build
         env:
           MY_OPENAI_TOKEN: ${{ secrets.MY_OPENAI_TOKEN }}
           MY_GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
